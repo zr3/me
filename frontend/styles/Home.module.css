@@ -103,6 +103,16 @@
   line-height: 1.5;
 }
 
+.profilepic {
+  margin: 1rem;
+  padding: 1.5rem;
+  max-width: 300px;
+}
+
+.profilepic img {
+  border-radius: 100%;
+}
+
 .logo {
   height: 1em;
   margin-left: 0.5rem;
