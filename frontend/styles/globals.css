@@ -2,13 +2,20 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: Consolas, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #121210;
+  color: #f2f5d5;
+  background-image: url('/profile.jpg');
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-size: 66vw;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  color: #d1a366;
 }
 
 * {

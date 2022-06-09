@@ -1,5 +1,6 @@
 .container {
   padding: 0 2rem;
+  max-width: 800px;
 }
 
 .main {
@@ -46,16 +47,45 @@
 }
 
 .title,
-.description {
+.description,
+.content {
   text-align: center;
+  background-color: #121210;
+}
+
+.heading {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 3rem;
+  background-color: #121210;
 }
 
 .description {
-  margin: 4rem 0;
+  margin: 4rem 0 1rem;
   line-height: 1.5;
   font-size: 1.5rem;
 }
 
+.content {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.25rem;
+}
+
+.list {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.list li {
+  list-style: none;
+  background-color: #121210;
+}
+
+.list li:before {
+  content: "# ";
+  color: #3a6e35;
+}
 .code {
   background: #fafafa;
   border-radius: 5px;
@@ -70,7 +100,6 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
 }
 
 .card {
