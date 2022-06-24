@@ -1,7 +1,21 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import CodeBG from '../components/code-bg'
+import Decoration from '../components/decoration'
 import styles from '../styles/Home.module.css'
+
+const palette = [
+  '#78f8ea',
+  '#60d5b9',
+  '#4eb28a',
+  '#40915e',
+  '#347035',
+  '#325917',
+  '#2f4400',
+  '#2b2f00',
+  '#281b00',
+]
 
 const Home: NextPage = () => {
   return (
@@ -12,16 +26,25 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <div className={styles.profilepic}>
+        <img src="/profile.jpg" alt="Headshot of Zak Reynolds" />
+      </div>
+
+      {/* <CodeBG /> */}
+      
       <main className={styles.main}>
-        <h1 id="title" className={styles.title}>
-          hey, i'm zak.
-        </h1>
 
-        <p className={styles.description}>
-          I'm a software engineer with a track record of architecting, designing, and building great web, cloud, and game solutions. Currently working on scaling and improving the reliability of a large website platform at <a href="https://www.leadventure.com" target="_blank">LeadVenture</a>!
-        </p>
+        <section id="header" className={styles.header}>
+          <h1 id="title" className={styles.title}>
+            hey, i'm zak.
+          </h1>
+          <p className={styles.description}>
+            I'm a software engineer with a track record of architecting, designing, and building great web, cloud, and game solutions. Currently working on scaling and improving the reliability of a large website platform at <a href="https://www.leadventure.com" target="_blank">LeadVenture</a>!
+          </p>
+        </section>
 
-        <section id="socials" className={styles.list}>
+        <section id="socials" className={styles.socials}>
+          <h2 className={styles.heading}>socials</h2>
           <ul>
             <li><a href="https://github.com/zr3">GitHub</a></li>
             <li>
@@ -30,10 +53,11 @@ const Home: NextPage = () => {
               </a>
             </li>
             <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://zre.itch.io" target="_blank">itch.io</a></li>
           </ul>
         </section>
         
-        <section id="others-said" className={styles.list}>
+        <section id="others-said" className={styles.others}>
           <h2 className={styles.heading}>some say i'm</h2>
           <ul>
             <li>chaotic good</li>
@@ -43,7 +67,7 @@ const Home: NextPage = () => {
           </ul>
         </section>
 
-        <section id="daytime-projects" className={styles.list}>
+        <section id="daytime-projects" className={styles.daytime}>
           <h2 className={styles.heading}>
             daytime projects
           </h2>
@@ -64,7 +88,7 @@ const Home: NextPage = () => {
           </ul>
         </section>
 
-        <section id="weekend-projects" className={styles.list}>
+        <section id="weekend-projects" className={styles.weekend}>
           <h2 className={styles.heading}>
             weekend projects
           </h2>
@@ -76,9 +100,10 @@ const Home: NextPage = () => {
             <li>gamepeanutbutters base code: https://github.com/zr3/gamepeanutbutters</li>
             <li>zakjr.com: https://github.com/zr3/zakjr-mag</li>
           </ul>
+          <Decoration />
         </section>
 
-        <section id="current-stack" className={styles.list}>
+        <section id="current-stack" className={styles.stack}>
           <h2 className={styles.heading}>
             tech i work with
           </h2>
@@ -108,7 +133,7 @@ const Home: NextPage = () => {
           </ul>
         </section>
 
-        <section id="happy" className={styles.list}>
+        <section id="happy" className={styles.happy}>
           <h2 className={styles.heading}>
             things that make me happy
           </h2>
@@ -136,11 +161,11 @@ const Home: NextPage = () => {
             <li>Learning</li>
             <li>Martin Fowler's blog</li>
             <li>Deleting accidental complexity</li>
-            <li></li>
+            <li>Brutalism</li>
           </ul>
         </section>
 
-        <section id="at-work" className={styles.list}>
+        <section id="at-work" className={styles.work}>
           <h2 className={styles.heading}>
             things i do at work
           </h2>
@@ -159,7 +184,7 @@ const Home: NextPage = () => {
           </ul>
         </section>
         
-        <section id="about-me" className={styles.content}>
+        <section id="about-me" className={styles.about}>
           <h2 className={styles.heading}>
             a little more about me
           </h2>

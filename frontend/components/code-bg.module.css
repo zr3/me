@@ -1,0 +1,59 @@
+/* 
+  '#78f8ea',
+  '#60d5b9',
+  '#4eb28a',
+  '#40915e',
+  '#347035',
+  '#325917',
+  '#2f4400',
+  '#2b2f00',
+  '#281b00',
+*/
+
+.container {
+    color: #2f4400;
+    z-index: 0;
+    position: absolute;
+    display: block;
+    top: 0px;
+    left: 0px;
+    width: 90vw;
+    overflow: hidden;
+}
+
+.container p {
+    transition: all ease-out 1s;
+    margin-top: 2px;
+    margin-bottom: 0px;
+}
+
+.container p:nth-child(4n) {
+    color: #2b2f00;
+}
+.container p:nth-child(4n + 1) {
+    color: #281b00;
+}
+.container p:nth-child(4n + 2) {
+    color: #2b2f00;
+}
+.container p:nth-child(4n + 3) {
+    color: #281b00;
+}
+.container p:nth-child(6n) {
+    margin-left: 0px;
+}
+.container p:nth-child(6n + 1) {
+    margin-left: 250px;
+}
+.container p:nth-child(6n + 2) {
+    margin-left: 500px;
+}
+.container p:nth-child(6n + 3) {
+    margin-left: 20px;
+}
+.container p:nth-child(6n + 4) {
+    margin-left: 70px;
+}
+.container p:nth-child(6n + 5) {
+    margin-left: -200px;
+}
