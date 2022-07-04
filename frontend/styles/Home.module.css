@@ -93,6 +93,7 @@
 .work li,
 .stack li {
   list-style: none;
+  padding-bottom: 0.5rem;
 }
 
 .socials li:before,
