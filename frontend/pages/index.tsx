@@ -204,7 +204,7 @@ const Home: NextPage = () => {
 
       <footer className={styles.footer}>
         <p>i made this site with <a href="https://nextjs.org/" target="_blank" rel="noreferrer">Next.js</a> c:</p>
-        <p>i don&apos;t need to track you or use cookies. so i don&apos;t.</p>"
+        <p>i don&apos;t need to track you or use cookies. so i don&apos;t.</p>
       </footer>
     </div>
   )
