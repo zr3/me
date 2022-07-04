@@ -1,7 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import CodeBG from '../components/code-bg'
 import Decoration from '../components/decoration'
 import styles from '../styles/Home.module.css'
 
@@ -48,11 +46,11 @@ const Home: NextPage = () => {
         <section id="socials" className={styles.socials}>
           <h2 className={styles.heading}>socials</h2>
           <ul>
-            <li><a href="https://github.com/zr3">GitHub</a></li>
+            <li><a href="https://github.com/zr3" target="_blank" rel="noreferrer">GitHub</a></li>
             <li>
               <a href="mailto:zakary.reynolds@gmail.com">email</a>
             </li>
-            <li><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+            <li><a href="https://www.linkedin.com/in/zak-reynolds-34a1a74a" target="_blank" rel="noreferrer">LinkedIn</a></li>
             <li><a href="https://zre.itch.io" target="_blank" rel="noreferrer">itch.io</a></li>
           </ul>
         </section>
