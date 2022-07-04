@@ -1,7 +1,3 @@
-/* @font-face {
-  font-family: trial;
-  src: url('/trialfont/Adieu/GTFAdieuTRIAL-Regular.otf');
-} */
 @font-face {
   font-family: 'Tofino';
   src: url('/font/Tofino-BlackPersonal.otf');
@@ -14,10 +10,6 @@
   font-family: 'Anonymous Pro';
   src: url('/font/Anonymous_Pro_Bl.ttf');
 }
-/* @font-face {
-  font-family: trialmono;
-  src: url('/trialfont/Good%20Mono/GTFGoodMonoTRIAL-Thin.otf');
-} */
 
 html {
   font-size: 12px;
@@ -31,10 +23,6 @@ body {
   font-family: 'Anonymous Pro', Consolas, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: #f2f5d5;
-  /* background-image: url('/profile.jpg');
-  background-repeat: no-repeat;
-  background-position-x: right;
-  background-size: 66vw; */
 }
 
 p {

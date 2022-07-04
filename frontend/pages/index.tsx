@@ -26,14 +26,13 @@ const Home: NextPage = () => {
         <title>Zak Reynolds - Software Engineer</title>
         <meta name="description" content="Zak Reynolds' personal website" />
         <meta name="version" content={version} />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </Head>
 
       <div className={styles.profilepic}>
         <img src="/profile.jpg" alt="Headshot of Zak Reynolds" />
       </div>
-
-      {/* <CodeBG /> */}
       
       <main className={styles.main}>
 
@@ -42,7 +41,7 @@ const Home: NextPage = () => {
             hey, i&apos;m zak.
           </h1>
           <p className={styles.description}>
-            I&apos;m a software engineer who architects, designs, and builds great web, cloud, and game solutions. Currently working on scaling a large multi-tenanted website platform!
+            I&apos;m a software engineer who architects, designs, and builds great web and cloud solutions, and I do game jams on the side. Currently working on scaling a large, multi-tenanted website platform!
           </p>
         </section>
 
@@ -104,36 +103,6 @@ const Home: NextPage = () => {
           <Decoration />
         </section>
 
-        {/* <section id="current-stack" className={styles.stack}>
-          <h2 className={styles.heading}>
-            tech i work with
-          </h2>
-          <ul>
-            <li>React</li>
-            <li>Redux</li>
-            <li>TypeScript</li>
-            <li>JavaScript/ES7</li>
-            <li>NodeJS</li>
-            <li>.NET 6</li>
-            <li>PostgreSQL</li>
-            <li>AWS</li>
-            <li>Docker</li>
-            <li>Kubernetes</li>
-            <li>Octopus Deploy</li>
-            <li>Jenkins</li>
-            <li>C#</li>
-            <li>C++</li>
-            <li>Bash</li>
-            <li>PowerShell</li>
-            <li>Terraform</li>
-            <li>SQL Server</li>
-            <li>Redis</li>
-            <li>RabbitMQ</li>
-            <li>ElasticSearch</li>
-            <li>Unity</li>
-          </ul>
-        </section> */}
-
         <section id="happy" className={styles.happy}>
           <h2 className={styles.heading}>
             things that make me happy
@@ -147,7 +116,6 @@ const Home: NextPage = () => {
             <li>Quality design and engineering</li>
             <li>Root cause analysis</li>
             <li>Great food</li>
-            <li>Creating joy</li>
             <li>Meaningful work</li>
             <li>Tabletop gaming</li>
             <li>Coding for humans</li>
@@ -161,8 +129,10 @@ const Home: NextPage = () => {
             <li>Event-driven architecture</li>
             <li>Learning</li>
             <li>Martin Fowler&apos;s blog</li>
+            <li>Creating joy</li>
             <li>Deleting accidental complexity</li>
             <li>Brutalism</li>
+            <li>Chorizo breakfast burritos</li>
           </ul>
         </section>
 
@@ -202,7 +172,7 @@ const Home: NextPage = () => {
       </main>
 
       <footer className={styles.footer}>
-        <p>I built this site!</p>
+        <p>I built this site! <a href="https://aws.amazon.com" target="_blank" rel="noreferrer">AWS</a>/<a href="https://github.com/features/actions" target="_blank" rel="noreferrer">GitHub</a>/<a href="https://nextjs.org" target="_blank" rel="noreferrer">NextJS</a></p>
         <p>I don&apos;t need to track you or use cookies. So i don&apos;t.</p>
       </footer>
     </div>
