@@ -36,10 +36,10 @@ const Home: NextPage = () => {
 
         <section id="header" className={styles.header}>
           <h1 id="title" className={styles.title}>
-            hey, i'm zak.
+            hey, i&apos;m zak.
           </h1>
           <p className={styles.description}>
-            I'm a software engineer with a track record of architecting, designing, and building great web, cloud, and game solutions. Currently working on scaling and improving the reliability of a large website platform at <a href="https://www.leadventure.com" target="_blank">LeadVenture</a>!
+            I&apos;m a software engineer who architects, designs, and builds great web, cloud, and game solutions. Currently working on scaling a large multi-tenanted website platform!
           </p>
         </section>
 
@@ -48,17 +48,15 @@ const Home: NextPage = () => {
           <ul>
             <li><a href="https://github.com/zr3">GitHub</a></li>
             <li>
-              <a href="mailto:zakary.reynolds@gmail.com">
-                zakary.reynolds@gmail.com
-              </a>
+              <a href="mailto:zakary.reynolds@gmail.com">email</a>
             </li>
-            <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://zre.itch.io" target="_blank">itch.io</a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+            <li><a href="https://zre.itch.io" target="_blank" rel="noreferrer">itch.io</a></li>
           </ul>
         </section>
         
         <section id="others-said" className={styles.others}>
-          <h2 className={styles.heading}>some say i'm</h2>
+          <h2 className={styles.heading}>some say i&apos;m</h2>
           <ul>
             <li>chaotic good</li>
             <li>proficient in perception</li>
@@ -103,7 +101,7 @@ const Home: NextPage = () => {
           <Decoration />
         </section>
 
-        <section id="current-stack" className={styles.stack}>
+        {/* <section id="current-stack" className={styles.stack}>
           <h2 className={styles.heading}>
             tech i work with
           </h2>
@@ -131,7 +129,7 @@ const Home: NextPage = () => {
             <li>ElasticSearch</li>
             <li>Unity</li>
           </ul>
-        </section>
+        </section> */}
 
         <section id="happy" className={styles.happy}>
           <h2 className={styles.heading}>
@@ -144,7 +142,7 @@ const Home: NextPage = () => {
             <li>Inclusiveness</li>
             <li>Health</li>
             <li>Quality design and engineering</li>
-            <li>Real solutions to problems</li>
+            <li>Root cause analysis</li>
             <li>Great food</li>
             <li>Creating joy</li>
             <li>Meaningful work</li>
@@ -159,7 +157,7 @@ const Home: NextPage = () => {
             <li>Minimalism</li>
             <li>Event-driven architecture</li>
             <li>Learning</li>
-            <li>Martin Fowler's blog</li>
+            <li>Martin Fowler&apos;s blog</li>
             <li>Deleting accidental complexity</li>
             <li>Brutalism</li>
           </ul>
@@ -186,23 +184,24 @@ const Home: NextPage = () => {
         
         <section id="about-me" className={styles.about}>
           <h2 className={styles.heading}>
-            a little more about me
+            more about me
           </h2>
           <p>
-            I started my coding journey early, using Allegro and Microsoft XNA in the 00s to remake my favorite Nintendo games &mdash; or at least I tried to! Later on, I pursued a business administration degree with a marketing concentration, and while I found the experience valuable, I realized it wasn't the career path for me.
+            I started my coding journey early, using Allegro and Microsoft XNA in the 00s to remake my favorite Nintendo games &mdash; or at least I tried to! I later pursued a business administration degree with a marketing concentration, and while I found the experience valuable, I realized it wasn&apos;t the career path for me.
           </p>
           <p>
             I returned to hobby game development with Unity, and I started entering game jams, reading, and building hobby projects while searching for a way to kick off a career in software. I was fortunate to find an excellent software development program at Western Governors University, and I started an internship at ARI Network Services (now LeadVenture), which gave me experience building websites and enterprise .NET applications.
           </p>
           <p>
-            The combination of business, design, and engineering experience with my human-first approach to work has enabled me to help projects succeed and take on more responsibility.
+            The combination of business, design, and engineering experience with my human-first approach to work has enabled me to help projects succeed, invent products and featuresets, and take on more responsibility.
           </p>
         </section>
 
       </main>
 
       <footer className={styles.footer}>
-        Built with 💚 by me
+        <p>i made this site with <a href="https://nextjs.org/" target="_blank" rel="noreferrer">Next.js</a> c:</p>
+        <p>i don&apos;t need to track you or use cookies. so i don&apos;t.</p>
       </footer>
     </div>
   )

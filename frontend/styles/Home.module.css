@@ -3,31 +3,21 @@
   /* max-width: 800px; */
 }
 
-.main {
-  position: relative;
-  min-height: 100vh;
-  padding: 20vh 0 0;
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 0px;
-  grid-auto-rows: minmax(10px, auto);
-}
-
 .footer {
   display: flex;
   flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
+  padding: 1rem 2rem 2rem;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  background-color: #121210;
+  text-align: center;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.footer p {
+  line-height: 1.2rem;
+  margin: 0;
+  font-family: Consolas, mono;
 }
 
 .title a {
@@ -42,8 +32,7 @@
 }
 
 .header {
-  grid-column: 1 / 8;
-  grid-row: 1;
+  position: relative;
 }
 
 .title {
@@ -67,7 +56,6 @@
 }
 
 .description {
-  margin: 4rem 0 1rem;
   line-height: 1.5;
   font-size: 1.5rem;
 }
@@ -78,110 +66,6 @@
   font-size: 1.25rem;
 }
 
-.socials {
-  grid-column: 1 / 4;
-  grid-row: 3;
-}
-
-.others {
-  grid-column: 5 / 8;
-  grid-row: 3;
-}
-
-/* .daytime {
-  grid-column: 1 / 13;
-  grid-row: 4;
-  margin-top: 25vh;
-}
-
-.weekend {
-  grid-column: 1 / 13;
-  grid-row: 5;
-} */
-
-.daytime,
-.weekend {
-  position: relative;
-  padding: 25vh 2rem 0;
-}
-
-.daytime {
-  grid-column: 1 / 7;
-  grid-row: 4;
-}
-
-.weekend {
-  grid-column: 7 / 13;
-  grid-row: 4;
-}
-
-.weekend:before {
-  content: "";
-  position: absolute;
-  top: 25vh;
-  right: 0px;
-  width: 75vw;
-  height: 80vh;
-  background-color: #121210;
-  z-index: -1;
-}
-
-
-.stack {
-  position: relative;
-  grid-column: 1 / 13;
-  grid-row: 6;
-}
-.stack:before {
-  content: "";
-  position: absolute;
-  top: 0%;
-  right: 0%;
-  width: 58vw;
-  height: 100%;
-  background-image: url('/profile.jpg');
-  background-size: 58vw;
-  background-attachment: fixed;
-  background-position: top right;
-
-  z-index: -1;
-}
-
-.happy {
-  grid-column: 1 / 7;
-  grid-row: 7;
-}
-
-.work {
-  grid-column: 1 / 13;
-  grid-row: 8;
-  background-color: #121210;
-}
-
-.about {
-  grid-column: 1 / 13;
-  grid-row: 9;
-  background-color: #121210;
-}
-
-.work,
-.about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.work ul,
-.about p {
-  max-width: 800px;
-}
-
-.footer {
-  grid-column: 1 / 13;
-  grid-row: 10;
-  background-color: #121210;
-}
-
 .socials,
 .others,
 .daytime,
@@ -190,7 +74,6 @@
 .work,
 .stack,
 .about {
-  margin: 0;
   font-size: 1.25rem;
 }
 
@@ -198,7 +81,6 @@
 .others li,
 .daytime li,
 .weekend li,
-.happy li,
 .work li {
   background-color: #121210;
 }
@@ -231,38 +113,201 @@
   flex-wrap: wrap;
 }
 
-.profilepic {
-  position: fixed;
-  display: block;
-  top: 0;
-  right: 0;
-  width: 58vw;
-  height: 58vw;
-  overflow: hidden;
-  z-index: -1;
-}
-
-.profilepic img {
-  position: absolute;
-  top: 0%;
-  right: 0%;
-  width: 100%;
-  height: 100%;
-  /* animation-name: photo-in; */
-  animation-duration: 1700ms;
-  animation-timing-function: ease-out;
-  filter: grayscale(1);
-}
-
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+
+.about p {
+  padding: 0rem 1rem;
 }
 
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+}
+
+.profilepic {
+  width: 100%;
+}
+
+.profilepic img {
+  width: 100%;
+}
+
+@media (max-width: 1199px) {
+  .header h1 {
+    position: absolute;
+    top: -7rem;
+  }
+
+  .description {
+    padding-top: 4rem;
+  }
+
+  .socials,
+  .others,
+  .daytime,
+  .weekend,
+  .happy,
+  .work,
+  .stack,
+  .about {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .profilepic {
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 58vw;
+    height: 58vw;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .profilepic img {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    /* animation-name: photo-in; */
+    animation-duration: 1700ms;
+    animation-timing-function: ease-out;
+    filter: grayscale(1);
+  }
+  
+  .main {
+    position: relative;
+    min-height: 100vh;
+    padding: 20vh 0 0;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0px;
+    grid-auto-rows: minmax(10px, auto);
+  }
+  
+  .description {
+    margin: 4rem 0 1rem;
+    padding-left: 2rem;
+  }
+
+  .header {
+    grid-column: 1 / 8;
+    grid-row: 1;
+  }
+  
+  .socials {
+    grid-column: 1 / 4;
+    grid-row: 3;
+    padding-left: 2rem;
+  }
+
+  .others {
+    grid-column: 5 / 8;
+    grid-row: 3;
+  }
+
+  .daytime,
+  .weekend {
+    position: relative;
+    padding: 25vh 2rem 0;
+  }
+
+  .daytime {
+    grid-column: 1 / 7;
+    grid-row: 4;
+  }
+
+  .weekend {
+    grid-column: 7 / 13;
+    grid-row: 4;
+  }
+
+  .weekend:before {
+    content: "";
+    position: absolute;
+    top: 25vh;
+    right: 0px;
+    width: 75vw;
+    height: 80vh;
+    background-color: #121210;
+    z-index: -1;
+  }
+
+  .stack {
+    position: relative;
+    grid-column: 1 / 13;
+    grid-row: 6;
+  }
+
+  .happy {
+    position: relative;
+    grid-column: 1 / 13;
+    grid-row: 7;
+    padding-left: 2rem;
+  }
+  .happy:before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 58vw;
+    height: 100%;
+    background-image: url('/profile.jpg');
+    background-size: 58vw;
+    background-attachment: fixed;
+    background-position: top right;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  .work {
+    grid-column: 1 / 13;
+    grid-row: 8;
+    background-color: #121210;
+  }
+
+  .about {
+    grid-column: 1 / 13;
+    grid-row: 9;
+    background-color: #121210;
+    padding-top: 2rem;
+  }
+
+  .work,
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .work ul,
+  .about p {
+    max-width: 800px;
+  }
+  
+  .socials,
+  .others,
+  .daytime,
+  .weekend,
+  .happy,
+  .work,
+  .stack,
+  .about {
+    margin: 0;
+  }
+  
+  .footer {
+    grid-column: 1 / 13;
+    grid-row: 10;
   }
 }
 

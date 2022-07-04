@@ -1,3 +1,20 @@
+/* @font-face {
+  font-family: trial;
+  src: url('/trialfont/Adieu/GTFAdieuTRIAL-Regular.otf');
+} */
+@font-face {
+  font-family: trial;
+  src: url('/font/Tofino-BlackPersonal.otf');
+}
+@font-face {
+  font-family: trialcopy;
+  src: url('/font/Nixie/NixieOne.ttf');
+}
+/* @font-face {
+  font-family: trialmono;
+  src: url('/trialfont/Good%20Mono/GTFGoodMonoTRIAL-Thin.otf');
+} */
+
 html {
   background-color: #121210;
 }
@@ -13,6 +30,17 @@ body {
   background-repeat: no-repeat;
   background-position-x: right;
   background-size: 66vw; */
+}
+
+p {
+  font-family: trialcopy, Roboto, sans-serif;
+  line-height: 1.8rem;
+}
+ul {
+  font-family: Consolas, monospace;
+}
+h1, h2 {
+  font-family: trial, Roboto, sans-serif;
 }
 
 a {
