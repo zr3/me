@@ -61,7 +61,7 @@ const Home: NextPage = () => {
         <section id="others-said" className={styles.others}>
           <h2 className={styles.heading}>some say i&apos;m</h2>
           <ul>
-            <li>chaotic good</li>
+            <li>aligned chaotic good</li>
             <li>proficient in perception</li>
             <li>rockstar-ish</li>
             <li>super empathetic</li>
@@ -73,12 +73,12 @@ const Home: NextPage = () => {
             daytime projects
           </h2>
           <ul> 
-            <li>Website Migration tool</li>
+            <li>Website migration tool</li>
             <li>Maintenance of a platform serving 14,000 websites</li>
-            <li>Asset migration to AWS S3</li>
-            <li>Cloud-based runtime sass compiler</li>
+            <li>Migration of media to AWS S3</li>
+            <li>Cloud-based sass compiling service</li>
             <li>Enterprise repository analytics app</li>
-            <li>Performance optimization</li>
+            <li>Continuous performance optimizations</li>
             <li>Development process automation</li>
             <li>IaC development and migration</li>
             <li>CMS React modules</li>
@@ -94,12 +94,12 @@ const Home: NextPage = () => {
             weekend projects
           </h2>
           <ul>
-            <li>zakreynolds.dev: https://github.com/zr3/me</li>
-            <li>smellslikegreen music visualizer: https://github.com/zr3/smellslikegreen</li>
+            <li>zakreynolds.dev: <a href="https://github.com/zr3/me" target="_blank" rel="noreferrer">on GitHub</a></li>
+            <li>smellslikegreen music visualizer: <a href="https://github.com/zr3/smellslikegreen" target="_blank" rel="noreferrer">on GitHub</a></li>
             <li>dnd vibe creation</li>
-            <li>The Deja Brew: https://ldjam.com/events/ludum-dare/47/the-deja-brew</li>
-            <li>gamepeanutbutters base code: https://github.com/zr3/gamepeanutbutters</li>
-            <li>zakjr.com: https://github.com/zr3/zakjr-mag</li>
+            <li>The Deja Brew: <a href="https://ldjam.com/events/ludum-dare/47/the-deja-brew" target="_blank" rel="noreferrer">on ldjam.com</a></li>
+            <li>gamepeanutbutters base code: <a href="https://github.com/zr3/gamepeanutbutters" target="_blank" rel="noreferrer">on GitHub</a></li>
+            <li>zakjr.com: <a href="https://github.com/zr3/zakjr-mag" target="_blank" rel="noreferrer">on GitHub</a></li>
           </ul>
           <Decoration />
         </section>
@@ -199,12 +199,11 @@ const Home: NextPage = () => {
             The combination of business, design, and engineering experience with my human-first approach to work has enabled me to help projects succeed, invent products and featuresets, and take on more responsibility.
           </p>
         </section>
-
       </main>
 
       <footer className={styles.footer}>
-        <p>i made this site with <a href="https://nextjs.org/" target="_blank" rel="noreferrer">Next.js</a> c:</p>
-        <p>i don&apos;t need to track you or use cookies. so i don&apos;t.</p>
+        <p>I built this site!</p>
+        <p>I don&apos;t need to track you or use cookies. So i don&apos;t.</p>
       </footer>
     </div>
   )

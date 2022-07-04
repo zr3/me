@@ -3,12 +3,16 @@
   src: url('/trialfont/Adieu/GTFAdieuTRIAL-Regular.otf');
 } */
 @font-face {
-  font-family: trial;
+  font-family: 'Tofino';
   src: url('/font/Tofino-BlackPersonal.otf');
 }
 @font-face {
-  font-family: trialcopy;
-  src: url('/font/Nixie/NixieOne.ttf');
+  font-family: 'Paloseco';
+  src: url('/font/Paloseco-Light.ttf');
+}
+@font-face {
+  font-family: 'Anonymous Pro';
+  src: url('/font/Anonymous_Pro_Bl.ttf');
 }
 /* @font-face {
   font-family: trialmono;
@@ -24,7 +28,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Consolas, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Anonymous Pro', Consolas, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: #f2f5d5;
   /* background-image: url('/profile.jpg');
@@ -34,14 +38,15 @@ body {
 }
 
 p {
-  font-family: trialcopy, Roboto, sans-serif;
-  line-height: 1.8rem;
+  font-family: 'Paloseco', Roboto, sans-serif;
+  line-height: 2.2rem;
+  font-size: 1.7rem;
 }
 ul {
-  font-family: Consolas, monospace;
+  font-family: 'Anonymous Pro', Consolas, monospace;
 }
 h1, h2 {
-  font-family: trial, Roboto, sans-serif;
+  font-family: 'Tofino', Roboto, sans-serif;
 }
 
 a {

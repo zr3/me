@@ -1,8 +1,3 @@
-.container {
-  /* padding: 0 2rem; */
-  /* max-width: 800px; */
-}
-
 .footer {
   display: flex;
   flex: 1;
@@ -15,9 +10,10 @@
 }
 
 .footer p {
-  line-height: 1.2rem;
+  font-family: 'Anonymous Pro', Consolas, monospace;
+  line-height: 1.5rem;
+  font-size: 1.25rem;
   margin: 0;
-  font-family: Consolas, mono;
 }
 
 .title a {
@@ -55,15 +51,8 @@
   background-color: #121210;
 }
 
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
 .content {
   margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.25rem;
 }
 
 .socials,
@@ -72,9 +61,8 @@
 .weekend,
 .happy,
 .work,
-.stack,
-.about {
-  font-size: 1.25rem;
+.stack {
+  font-size: 1.5rem;
 }
 
 .socials li,
@@ -198,6 +186,8 @@
   .description {
     margin: 4rem 0 1rem;
     padding-left: 2rem;
+    font-size: 2rem;
+    line-height: 3rem;
   }
 
   .header {
