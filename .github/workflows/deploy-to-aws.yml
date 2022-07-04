@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - name: setup environemnt
+      - name: setup environment
         run: |
           echo "APP_VERSION=$(date +%s)" >> $GITHUB_ENV
       - name: install dependencies
