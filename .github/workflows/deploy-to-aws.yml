@@ -6,11 +6,32 @@ on:
     branches:
       - main
 jobs:
-  test-github-actions:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - run: node -v
+      - name: setup environemnt
+        run: |
+          cd frontend
+          echo "APP_VERSION=$(date +%s)" >> $GITHUB_ENV
+      - name: install dependencies
+        run: npm install
+      - name: build
+        run: npm run build
+      - name: deploy to aws
+        uses: reggionick/s3-deploy@v3
+        with:
+          folder: out
+          bucket: ${{ secrets.S3_BUCKET }}
+          bucket-region: ${{ secrets.S3_BUCKET_REGION }}
+          dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+          invalidation: /
+          delete-removed: true
+          no-cache: true
+          private: true

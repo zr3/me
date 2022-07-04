@@ -17,12 +17,15 @@ const palette = [
   '#281b00',
 ]
 
+const version = process.env.APP_VERSION
+
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
         <title>Zak Reynolds - Software Engineer</title>
         <meta name="description" content="Zak Reynolds' personal website" />
+        <meta name="version" content={version} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -201,7 +204,7 @@ const Home: NextPage = () => {
 
       <footer className={styles.footer}>
         <p>i made this site with <a href="https://nextjs.org/" target="_blank" rel="noreferrer">Next.js</a> c:</p>
-        <p>i don&apos;t need to track you or use cookies. so i don&apos;t.</p>
+        <p>i don&apos;t need to track you or use cookies. so i don&apos;t.</p>"
       </footer>
     </div>
   )
