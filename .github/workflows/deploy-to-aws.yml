@@ -18,16 +18,17 @@ jobs:
           node-version: '16'
       - name: setup environemnt
         run: |
-          cd frontend
           echo "APP_VERSION=$(date +%s)" >> $GITHUB_ENV
       - name: install dependencies
         run: npm install
+        working-directory: ./frontend
       - name: build
         run: npm run build
+        working-directory: ./frontend
       - name: deploy to aws
         uses: reggionick/s3-deploy@v3
         with:
-          folder: out
+          folder: ./frontend/out
           bucket: ${{ secrets.S3_BUCKET }}
           bucket-region: ${{ secrets.S3_BUCKET_REGION }}
           dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
