@@ -171,7 +171,7 @@ const Home: NextPage = () => {
 
       <footer className={styles.footer}>
         <p>I built this site! <a href="https://aws.amazon.com" target="_blank" rel="noreferrer">AWS</a>/<a href="https://github.com/features/actions" target="_blank" rel="noreferrer">GitHub</a>/<a href="https://nextjs.org" target="_blank" rel="noreferrer">NextJS</a></p>
-        <p>I don&apos;t need to track you or use cookies. So i don&apos;t.</p>
+        <p>I don&apos;t need to track you or use cookies. So I don&apos;t.</p>
       </footer>
     </div>
   )
