@@ -149,7 +149,6 @@ const Home: NextPage = () => {
             <li>Creating infrastructure in AWS with Terraform and paving the way for new feature development to be possible for other teams.</li>
             <li>Designed, architected, and functioned as lead of a geodistributed team implementing a form builder for power users. Developed a set of client modules using React, Typescript, and Redux, and a dotnet core service with an HTTP interface and database tables for a backend service.</li>
             <li>Architected and functioned as team lead implementing a drag-and-drop web layout editor. Primarily used React, Redux, and material-ui for a client module, and a dotnet core service with an event-oriented interface integrated with RabbitMQ.</li>
-            <li>Made over 12 game prototypes for 48-72 hour hackathons, primarily using C# and Unity. More recently released some base code for more efficient development.</li>
           </ul>
         </section>
         
