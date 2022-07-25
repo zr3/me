@@ -25,14 +25,14 @@ body {
   color: #f2f5d5;
 }
 
-p {
+ul, p {
   font-family: 'Paloseco', Roboto, sans-serif;
   line-height: 2.2rem;
   font-size: 1.7rem;
 }
-ul {
+/* ul {
   font-family: 'Anonymous Pro', Consolas, monospace;
-}
+} */
 h1, h2 {
   font-family: 'Tofino', Roboto, sans-serif;
 }

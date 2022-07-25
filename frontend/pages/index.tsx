@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Decoration from '../components/decoration'
+import LandingFX from '../components/landing-fx'
 import styles from '../styles/Home.module.css'
 
 const palette = [
@@ -28,40 +29,42 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </Head>
 
-      <div className={styles.profilepic}>
-        <img src="/profile.jpg" alt="Headshot of Zak Reynolds" />
-      </div>
+      {/* <LandingFX /> */}
       
       <main className={styles.main}>
+
+        <div className={styles.profilepic}>
+          <img src="/profile.jpg" alt="Headshot of Zak Reynolds" />
+        </div>
 
         <section id="header" className={styles.header}>
           <h1 id="title" className={styles.title}>
             hey, i&apos;m zak.
           </h1>
           <p className={styles.description}>
-            I&apos;m a software engineer who architects, designs, and builds great web and cloud solutions, and I do game jams on the side. Currently working on scaling a large, multi-tenanted website platform!
+            I&apos;m a software engineer who architects, designs, and builds great web and cloud solutions, and I do game jams on the side. Currently scaling a large, multi-tenanted website platform!
           </p>
         </section>
 
         <section id="socials" className={styles.socials}>
-          <h2 className={styles.heading}>socials</h2>
+          <h2 className={styles.heading}>a few socials</h2>
           <ul>
             <li><a href="https://github.com/zr3" target="_blank" rel="noreferrer">GitHub</a></li>
+            <li><a href="https://zre.itch.io" target="_blank" rel="noreferrer">itch.io</a></li>
             <li>
               <a href="mailto:zakary.reynolds@gmail.com">email</a>
             </li>
             <li><a href="https://www.linkedin.com/in/zak-reynolds-34a1a74a" target="_blank" rel="noreferrer">LinkedIn</a></li>
-            <li><a href="https://zre.itch.io" target="_blank" rel="noreferrer">itch.io</a></li>
           </ul>
         </section>
         
         <section id="others-said" className={styles.others}>
           <h2 className={styles.heading}>some say i&apos;m</h2>
           <ul>
-            <li>aligned chaotic good</li>
-            <li>proficient in perception</li>
-            <li>rockstar-ish</li>
-            <li>super empathetic</li>
+            <li title="a Dungeons and Dragons reference">aligned chaotic good</li>
+            <li title="another D&amp;D reference!">proficient in perception</li>
+            <li title="sans the ego">rockstar-ish</li>
+            <li title="all code is ultimately for people">super empathetic</li>
           </ul>
         </section>
 
@@ -71,18 +74,18 @@ const Home: NextPage = () => {
           </h2>
           <ul> 
             <li>Website migration tool</li>
-            <li>Maintenance of a platform serving 14,000 websites</li>
-            <li>Migration of media to AWS S3</li>
+            {/* <li>Maintenance of a platform serving 14,000 websites</li> */}
+            {/* <li>Migration of media to AWS S3</li> */}
             <li>Cloud-based sass compiling service</li>
             <li>Enterprise repository analytics app</li>
-            <li>Continuous performance optimizations</li>
+            {/* <li>Continuous performance optimizations</li> */}
             <li>Development process automation</li>
             <li>IaC development and migration</li>
-            <li>CMS React modules</li>
-            <li>Website layout management system</li>
-            <li>Website style management system</li>
-            <li>CSS framework development</li>
-            <li>Website operations efficiency tools</li>
+            <li>React modules for CMS app</li>
+            {/* <li>Website layout management system</li> */}
+            {/* <li>Website style management system</li> */}
+            {/* <li>CSS framework development</li> */}
+            {/* <li>Website operations efficiency tools</li> */}
           </ul>
         </section>
 
@@ -139,13 +142,13 @@ const Home: NextPage = () => {
             things i do at work
           </h2>
           <ul>
-            <li>Architecture and system design for a multitenanted web platform that serves 14,000 websites and an average of 10.6 million requests per day.</li>
+            <li>Architecture and system design for a multitenanted web platform that serves <span className={styles.numeral}>14,000</span> websites and an average of <span className={styles.numeral}>10.6 million</span> requests per day.</li>
             <li>Mentoring other developers, resolving conflicts within teams and between departments, and providing guidance at critical moments in projects.</li>
             <li>Designed and implemented architecture for a set of modules that automate website migrations.</li>
-            <li>Managed and implemented a project to migrate files from a complex legacy system to AWS S3.</li>
+            <li>Managed and implemented a project to migrate files from a complex legacy system to <span className={styles.numeral}>AWS S3</span>.</li>
             <li>Identifying and extracting legacy functionality into microservices. Separating domain code from technical code. Refactoring existing codebase to remove accidental complexity.</li>
-            <li>Designed and developed automation for managing a git methodology that supports multiple deployment environments and over 40 project repositories, enhancing CI/CD practices.</li>
-            <li>Monitoring, diagnosing, and solving system performance issues. Resolved a longstanding issue that was causing a 10-second spike in average response times every few weeks.</li>
+            <li>Designed and developed automation for managing a git methodology that supports multiple deployment environments and over <span className={styles.numeral}>40</span> project repositories, enhancing CI/CD practices.</li>
+            <li>Monitoring, diagnosing, and solving system performance issues. Resolved a longstanding issue that was causing a <span className={styles.numeral}>10-second</span> spike in average response times every few weeks.</li>
             <li>Creating infrastructure in AWS with Terraform and paving the way for new feature development to be possible for other teams.</li>
             <li>Designed, architected, and functioned as lead of a geodistributed team implementing a form builder for power users. Developed a set of client modules using React, Typescript, and Redux, and a dotnet core service with an HTTP interface and database tables for a backend service.</li>
             <li>Architected and functioned as team lead implementing a drag-and-drop web layout editor. Primarily used React, Redux, and material-ui for a client module, and a dotnet core service with an event-oriented interface integrated with RabbitMQ.</li>

@@ -16,17 +16,6 @@
   margin: 0;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
 .header {
   position: relative;
 }
@@ -55,6 +44,10 @@
   margin: 4rem 0;
 }
 
+.numeral {
+  font-family: 'Anonymous Pro', monospace;
+}
+
 .socials,
 .others,
 .daytime,
@@ -67,10 +60,20 @@
 
 .socials li,
 .others li,
-.daytime li,
-.weekend li,
 .work li {
   background-color: #121210;
+}
+
+.daytime,
+.weekend {
+  background-color: #f2f5d5;
+  color: #121210;
+}
+
+.daytime .heading,
+.weekend .heading {
+  background-color: #f2f5d5;
+  color: #121210;
 }
 
 .socials li,
@@ -150,25 +153,31 @@
 
 @media (min-width: 1200px) {
   .profilepic {
-    position: fixed;
+    position: relative;
     display: block;
-    top: 0;
-    right: 0;
-    width: 58vw;
-    height: 58vw;
-    overflow: hidden;
+    /* top: 0; */
+    /* right: 0; */
+    /* width: 50vw; */
+    /* height: 100vh; */
+    /* overflow: hidden; */
     z-index: -1;
+    background: #f2f5d5;
+    grid-row: 1;
+    grid-column: 9/12;
+    opacity: 0;
+    animation: fadeIn 350ms ease-out 4.3s 1 normal forwards;
   }
   
   .profilepic img {
     position: absolute;
     top: 0%;
     right: 0%;
-    width: 100%;
-    height: 100%;
+    width: 25vw;
+    height: 25vw;
     animation-duration: 1700ms;
     animation-timing-function: ease-out;
-    filter: grayscale(1);
+    /* filter: grayscale(1); */
+    /* visibility: hidden; */
   }
   
   .main {
@@ -181,12 +190,106 @@
     gap: 0px;
     grid-auto-rows: minmax(10px, auto);
   }
-  
+
+  .title:before {
+    content: "";
+    position: absolute;
+    background-color: #121210;
+    right: 0rem;
+    width: 80rem;
+    height: 4.7rem;
+    animation: titleType 2000ms linear 1s 1 normal forwards;
+  }
+
+  @keyframes titleType {
+    /*
+    width: 48.1rem;
+    width: 45.8rem;
+    width: 43.5rem;
+    width: 42rem;
+
+    width: 40.2rem;
+    width: 39.2rem;
+    width: 35.2rem;
+    width: 32.4rem;
+    width: 29.9rem;
+    width: 27.4rem;
+    width: 25.5rem;
+    */
+    0% {
+      width: calc(50% + 13rem);
+      animation-timing-function: steps(1);
+    }
+    5% {
+      width: calc(50% + 9.6rem);
+      animation-timing-function: steps(1);
+    }
+    7% {
+      width: calc(50% + 7.3rem);
+      animation-timing-function: steps(1);
+    }
+    12% {
+      width: calc(50% + 5rem);
+      animation-timing-function: steps(1);
+    }
+    20% {
+      width: calc(50% + 4rem);
+      animation-timing-function: steps(1);
+    }
+    /* hey, */
+
+    45% {
+      width: calc(50% + 1.7rem);
+      animation-timing-function: steps(1);
+    }
+    52% {
+      width: calc(50% + 0.7rem);
+      animation-timing-function: steps(1);
+    }
+    60% {
+      width: calc(50% - 3.3rem);
+      animation-timing-function: steps(1);
+    }
+    68% {
+      width: calc(50% - 6.1rem);
+      animation-timing-function: steps(1);
+    }
+    72% {
+      width: calc(50% - 8.6rem);
+      animation-timing-function: steps(1);
+    }
+    75% {
+      width: calc(50% - 11.1rem);
+      animation-timing-function: steps(1);
+    }
+    82% {
+      width: calc(50% - 12rem);
+      animation-timing-function: steps(1);
+    }
+    /* hey, i'm zak. */
+    100% {
+      width: 0rem;
+    }
+  }
+
   .description {
     margin: 4rem 0 1rem;
     padding-left: 2rem;
     font-size: 2rem;
     line-height: 3rem;
+    opacity: 0;
+    animation: fadeIn 350ms ease-out 3s 1 normal forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
   }
 
   .header {
@@ -197,18 +300,37 @@
   .socials {
     grid-column: 1 / 4;
     grid-row: 3;
-    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: right;
+    padding-bottom: 22vh;
+    opacity: 0;
+    animation: fadeIn 350ms ease-out 4s 1 normal forwards;
+  }
+
+  .socials li:before {
+    content: "";
+
+  }
+  .socials li:after {
+    content: " #";
+    color: #3a6e35;
+  }
+
+  .socials li {
+    padding-right: 40px;
   }
 
   .others {
     grid-column: 5 / 8;
     grid-row: 3;
+    opacity: 0;
+    animation: fadeIn 350ms ease-out 4.1s 1 normal forwards;
   }
 
   .daytime,
   .weekend {
     position: relative;
-    padding: 25vh 2rem 0;
+    padding: 15vh 2rem 15vh;
   }
 
   .daytime {
@@ -251,12 +373,28 @@
     right: 0%;
     width: 58vw;
     height: 100%;
-    background-image: url('/profile.jpg');
+    background-image: url('/gemma.jpg');
     background-size: 58vw;
     background-attachment: fixed;
     background-position: top right;
     background-repeat: no-repeat;
     z-index: -1;
+    filter: sepia(0.5);
+  }
+  .happy:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    width: 58vw;
+    height: 100%;
+    background-image: url('/lighthouse.jpg');
+    background-size: 58vw;
+    background-attachment: fixed;
+    background-position: top right;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: sepia(0.5) grayscale(0.5);
   }
 
   .work {
